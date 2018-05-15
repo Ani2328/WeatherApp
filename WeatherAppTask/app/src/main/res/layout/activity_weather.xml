@@ -1,18 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.design.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/viewApp"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+<android.support.design.widget.AppBarLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.creditmantri.weatherapptask.WeatherActivity">
+    android:layout_height="wrap_content"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_scrollFlags="scroll"
+        app:titleEnabled="false">
 
-</android.support.constraint.ConstraintLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:baselineAligned="false">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:orientation="horizontal">
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="5"
+                    android:id="@+id/xcv_ch_view"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="dsfdsf"
+                            android:layout_weight="2"
+                            android:textColor="@color/colorAccent"
+                            android:id="@+id/xtv_chennai"
+                            android:textSize="18dp"/>
+                        <TextView
+                            android:id="@+id/xtv_ch_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="30dp" /></LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="35"
+                            android:id="@+id/xtv_ch_weather"
+                            android:textColor="@color/colorAccent"
+                            android:layout_below="@+id/xtv_chennai"
+                            android:textSize="18dp"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_weight="5"
+                    android:id="@+id/xcv_mi_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mumbai"
+                            android:layout_weight="2"
+                            android:textColor="@color/colorAccent"
+                            android:id="@+id/xtv_mumbai"
+                            android:textSize="18dp"/>
+                        <TextView
+                            android:id="@+id/xtv_mi_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="30dp" /></LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="35"
+                            android:id="@+id/xtv_mi_weather"
+                            android:textColor="@color/colorAccent"
+                            android:layout_below="@+id/xtv_mumbai"
+                            android:textSize="18dp"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="5"
+                    android:id="@+id/xcv_bg_view"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bengaluru"
+                            android:layout_weight="2"
+                            android:textColor="@color/colorAccent"
+                            android:id="@+id/xtv_bengaluru"
+                            android:textSize="18dp"/>
+                        <TextView
+                            android:id="@+id/xtv_bg_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="30dp" /></LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="35"
+                            android:id="@+id/xtv_bg_weather"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="18dp"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_weight="5"
+                    android:id="@+id/xcv_nd_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="New Delhi"
+                            android:layout_weight="2"
+                            android:textColor="@color/colorAccent"
+                            android:id="@+id/xtv_newdelhi"
+                            android:textSize="18dp"/>
+                        <TextView
+                            android:id="@+id/xtv_nd_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="30dp" /></LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="35"
+                            android:id="@+id/xtv_nd_weather"
+                            android:textColor="@color/colorAccent"
+                            android:layout_below="@+id/xtv_newdelhi"
+                            android:textSize="18dp"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/tab_indicator"/>
+
+</android.support.design.widget.AppBarLayout>
+
+<android.support.v4.view.ViewPager
+    android:id="@+id/viewPager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <include layout="@layout/detail_weather_layout" />
+
+</android.support.design.widget.CoordinatorLayout>
